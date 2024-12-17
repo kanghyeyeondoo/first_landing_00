@@ -1,0 +1,324 @@
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  overflow: hidden; /* 스크롤 제거 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: calc(100vw * 9 / 16); /* 16:9 비율 유지 */
+  max-height: 100vh;
+  background-color: #003366;
+  overflow: hidden; /* 초과 내용 숨김 */
+}
+
+.animated-path {
+  position: absolute;
+
+  transform-origin: center;
+  mix-blend-mode: color-burn;
+}
+
+.bg_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.path_01 {
+  position: absolute;
+  top: 10%;
+  left: 0%;
+  height: 50%;
+  opacity: 100%;
+}
+
+.path_02 {
+  position: absolute;
+  top: 0%;
+  left: 20%;
+  height: 30%;
+  opacity: 100%;
+}
+.path_03 {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  height: 30%;
+  opacity: 100%;
+}
+.path_04 {
+  position: absolute;
+  top: 0%;
+  right: -1%;
+  height: 60%;
+  opacity: 100%;
+}
+.path_05 {
+  position: absolute;
+  top: 30%;
+  left: 27%;
+  height: 30%;
+  opacity: 100%;
+}
+.path_06 {
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  height: 70%;
+  opacity: 100%;
+}
+.path_07 {
+  position: absolute;
+  top: 45%;
+  right: -1%;
+  height: 60%;
+  opacity: 100%;
+}
+.path_08 {
+  position: absolute;
+  top: 45%;
+  left: 55%;
+  height: 60%;
+  opacity: 100%;
+}
+.path_10 {
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  height: 20%;
+  opacity: 100%;
+}
+
+.path_09 {
+  position: absolute;
+  bottom: 15%;
+  left: 0%;
+  height: 30%;
+  opacity: 100%;
+}
+.map_01 {
+  position: absolute;
+  top: 74.5%;
+  left: 23.2%;
+  width: 6%;
+  height: 6%;
+  opacity: 75%;
+}
+
+.map_02 {
+  position: absolute;
+  top: 70%;
+  left: 33.2%;
+  width: 6%;
+  height: 6%;
+  opacity: 80%;
+}
+
+.map_03 {
+  position: absolute;
+  top: 36%;
+  left: 40.5%;
+  width: 6%;
+  height: 6%;
+  opacity: 75%;
+}
+
+.map_04 {
+  position: absolute;
+  top: 45%;
+  left: 51.2%;
+  width: 6%;
+  height: 6%;
+  opacity: 75%;
+}
+
+.map_05 {
+  position: absolute;
+  top: 45%;
+  left: 66.2%;
+  width: 6%;
+  height: 6%;
+  opacity: 80%;
+}
+
+.map_06 {
+  position: absolute;
+  top: 20%;
+  left: 63.6%;
+  width: 6%;
+  height: 6%;
+  opacity: 75%;
+}
+
+.sub_title {
+  position: absolute;
+  top: 26%;
+  left: 17.3%;
+  font-size: 14px;
+  z-index: 200;
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.location {
+  position: absolute;
+  top: 50%;
+  left: 17.5%;
+  font-size: 14px;
+  z-index: 200;
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.title {
+  position: absolute;
+  top: 30%;
+  left: 17%;
+  width: 35%;
+  opacity: 100%;
+  z-index: 200;
+}
+
+.logo {
+  position: absolute;
+  top: 83%;
+  left: 3%;
+  width: 25%;
+  opacity: 80%;
+  z-index: 20;
+}
+
+/* circle_01 애니메이션 */
+@keyframes shakeRight {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(5px, -2px);
+  }
+  50% {
+    transform: translate(-5px, 2px);
+  }
+  75% {
+    transform: translate(5px, 2px);
+  }
+}
+
+/* circle_02 애니메이션 */
+@keyframes shakeLeft {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-5px, 2px);
+  }
+  50% {
+    transform: translate(5px, -2px);
+  }
+  75% {
+    transform: translate(-5px, -2px);
+  }
+}
+
+.circle_01 {
+  position: absolute;
+  top: 0%;
+  left: -3%;
+  width: 100%;
+  opacity: 70%;
+  height: 100%;
+  animation: shakeRight 3s infinite ease-in-out; /* 오른쪽 방향으로 흔들림 */
+}
+
+.circle_02 {
+  position: absolute;
+  top: 2%;
+  left: 0%;
+  width: 100%;
+  opacity: 60%;
+  animation: shakeLeft 3s infinite ease-in-out; /* 왼쪽 방향으로 흔들림 */
+}
+
+.circle_00 {
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  width: 20%; /* 원하는 비율로 크기 조절 */
+  height: auto;
+}
+
+.way_red {
+  z-index: 100;
+  position: absolute;
+  top: 27%;
+  left: 0%;
+  width: 70%; /* 원하는 비율로 크기 조절 */
+  height: auto;
+}
+
+.dates {
+  position: absolute;
+  top: 7%;
+  right: 3%;
+  text-align: right;
+  font-size: 1.4rem;
+  color: darkslateblue;
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.message_img {
+  position: absolute;
+  bottom: 5%;
+  right: 2%;
+  width: 35%;
+}
+
+.info-btn {
+  position: absolute;
+  bottom: 11.3%;
+  right: 10%;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: "Noto Serif KR", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.boat_img {
+  position: absolute;
+  top: 68%;
+  left: 10%;
+  height: 18%;
+  z-index: 200;
+}
+
+.footer {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.footer img {
+  height: 30px;
+  margin-right: 10px;
+}
